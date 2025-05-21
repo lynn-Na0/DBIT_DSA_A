@@ -6,7 +6,6 @@ print(type(my_set))
 
 print(f"  my_set: {my_set}")
 
-
 # insert/ add element - cant have duplicates hence second 5 not displayed
 my_set.add(5)
 print(f"  After adding 5: {my_set}")

@@ -4,20 +4,20 @@ student = {
     "grade": "A"
 }
 
-print(f"  Number of items: {len(student)}")
+print(f" Number of items: {len(student)}")
 
 # Looping Through a Dictionary
 for key in student:
-    print(f"  {key}: {student[key]}")
+    print(f" {key}: {student[key]}")
 
 # OR
 for key, value in student.items():
-    print(f"  {key} => {value}")
+    print(f" {key} => {value}")
 
 # Dictionary Keys, Values, Items
-print(f"  Keys: {list(student.keys())}")
-print(f"  Values: {list(student.values())}")
-print(f"  Items: {list(student.items())}")
+print(f" Keys: {list(student.keys())}")
+print(f" Values: {list(student.values())}")
+print(f" Items: {list(student.items())}")
 
 school = {
     "student1": {"name": "Alice", "age": 20},
