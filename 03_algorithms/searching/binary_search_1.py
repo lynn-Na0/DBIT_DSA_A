@@ -1,5 +1,7 @@
 import random
 
+# recursive binary search
+
 def binary_search(list_of_values, target_search, low, high):
     # Base case
     # check if there are values
@@ -18,14 +20,17 @@ def binary_search(list_of_values, target_search, low, high):
     else:
         return binary_search(list_of_values,target_search,low, mid - 1)
     
-
-values = sorted([random.randint(1,100) for _ in range(40)])
+# generate 10 random values between 1 and 100
+values = sorted([random.randint(1,100) for _ in range(10)])
 print(f"Values {values}")
 
+# enter the value to search for
 target = int(input("Enter number to search : "))
 
+# call the function and pass in the parameters
 result = binary_search(values, target, 0, len(values) - 1)
 
+# check what has been returned
 if result != -1:
     print(f"Value {values[result]} found at index {result}")
 else:
