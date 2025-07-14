@@ -4,6 +4,7 @@ def bubble_sort(unsorted_list):
     for outerloop in range(number_of_items):
         for innerloop in range(0, number_of_items - 1 - outerloop):
             if unsorted_list[innerloop] > unsorted_list[innerloop + 1]:
+                # swap the values if the current value is larger than the next value
                 temp = unsorted_list[innerloop]
                 unsorted_list[innerloop] = unsorted_list[innerloop + 1]
                 unsorted_list[innerloop + 1 ] = temp
