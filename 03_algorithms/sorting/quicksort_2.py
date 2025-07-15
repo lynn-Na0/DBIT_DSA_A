@@ -2,7 +2,7 @@ import random
 
 def quick_sort(values):
     # If the list has 1 or no elements, it's already sorted
-    if len(values) <= 1:
+    if len(values) <= 1: # checks if you have 1 or no elements, if you do it returns the list
         return values
 
     # pivot (first element)
@@ -16,7 +16,7 @@ def quick_sort(values):
     right = []
 
     # start from index to skip the pivot
-    for number in values[1:]:  
+    for number in values[1:]:  # starts from the second element
         if number <= pivot:
             left.append(number)
         else:
@@ -26,7 +26,7 @@ def quick_sort(values):
     # print(f"Right {right}")
 
     # Recursively sort both parts and put them together
-    return quick_sort(left) + [pivot] + quick_sort(right)
+    return quick_sort(left) + [pivot] + quick_sort(right) 
 
 # 10 unique numbers from 1 to 99
 random_list = random.sample(range(1, 100), 3)
