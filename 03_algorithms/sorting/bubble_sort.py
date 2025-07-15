@@ -1,21 +1,30 @@
+import random
+
 def bubble_sort(unsorted_list):
-    number_of_items = len(unsorted_list)
+    number_of_elements = len(unsorted_list)
     
-    for outerloop in range(number_of_items):
-        for innerloop in range(0, number_of_items - 1 - outerloop):
+    for outerloop in range(number_of_elements):
+        for innerloop in range(0,number_of_elements - 1 - outerloop):
             if unsorted_list[innerloop] > unsorted_list[innerloop + 1]:
-                # swap the values if the current value is larger than the next value
+                # unsorted_list[innerloop], unsorted_list[innerloop + 1] = (
+                #     unsorted_list[innerloop+1] ,unsorted_list[innerloop] 
+                # )
+                
+                # diffrent way of swapping values
                 temp = unsorted_list[innerloop]
                 unsorted_list[innerloop] = unsorted_list[innerloop + 1]
-                unsorted_list[innerloop + 1 ] = temp
+                unsorted_list[innerloop + 1] = temp
+                
+            # inside inner loop
+            # print(f"Innerloop {unsorted_list}")
             
-            # print(f"Inner loop {unsorted_list}")  
-        # print(f"Outer loop {unsorted_list}")
-  
+        # inside outer loop
+        # print(f"Outerloop {unsorted_list}")
     return unsorted_list
 
-values = [5,4,3,2,1]
-print(f"Unsorted List {values}")
+# 10 unique numbers from 1 to 99
+random_list = random.sample(range(1, 100), 10)
+print("Unsorted list:", random_list)
 
-sorted_list = bubble_sort(values)
-print(f"Sorted List {sorted_list}")
+sorted_list = bubble_sort(random_list.copy())
+print("Sorted list:", sorted_list)
